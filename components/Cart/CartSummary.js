@@ -1,7 +1,11 @@
-import React from "react";
+import React from 'react';
 
 const CartSummary = () => {
-    return <>CartSummary</>;
+    return (
+        <>
+            CartSummary
+        </>
+    );
 };
 
 export default CartSummary;

@@ -1,7 +1,11 @@
-import React from "react";
+import React from 'react';
 
 const AccountHeader = () => {
-    return <>AccountHeader</>;
+    return (
+        <>
+            AccountHeader
+        </>
+    );
 };
 
 export default AccountHeader;

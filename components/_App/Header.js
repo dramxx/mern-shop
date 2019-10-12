@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { Container, Icon, Image, Menu } from 'semantic-ui-react';
 import Link from 'next/link';
 import Router, { useRouter } from 'next/router';

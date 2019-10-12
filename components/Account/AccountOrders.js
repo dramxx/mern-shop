@@ -1,7 +1,11 @@
-import React from "react";
+import React from 'react';
 
 const AccountOrders = () => {
-    return <>AccountOrders</>;
+    return (
+        <>
+            AccountOrders
+        </>
+    );
 };
 
 export default AccountOrders;
