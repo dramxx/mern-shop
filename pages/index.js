@@ -3,8 +3,6 @@ import axios from 'axios';
 
 const Home = ( { products } ) => {
 
-    console.log( '[products]:', products );
-
     return (
         <>
             products
@@ -13,7 +11,7 @@ const Home = ( { products } ) => {
 };
 
 Home.getInitialProps = async () => {
-    const url = `http://localhost:3000/api/product`;
+    const url = `http://localhost:3000/api/products`;
     const response = await axios.get( url );
     return { products: response.data }
 };
