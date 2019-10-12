@@ -18,7 +18,12 @@ const Header = ( props ) => {
     };
 
     return (
-        <Menu id={ 'menu' } fluid inverted>
+        <Menu
+            id={ 'menu' }
+            fluid
+            inverted
+            stackable
+        >
             <Container text={ true }>
 
                 <Link href={ '/' }>
