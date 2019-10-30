@@ -1,8 +1,13 @@
-import allProductsJSON from "../../static/products.json";
+// import allProducts_JSON from "../../static/products.json";
+import ProductSchema from "../../models/Product";
 import connectDb from "../../utils/connectDb";
 
-connectDb();
-
-export default ( req, res ) => {
-    res.status( 200 ).json( allProductsJSON );
+export default async ( req, res ) => {
+    console.log( '[ mongo async call ]' );
+    await connectDb();
+    const products = await ProductSchema.find()
+        .then( ( res ) => console.log( '[ res ]: ', res ) )
+        .catch( ( err ) => console.log( '[ err ]: ', err ) );
+    res.status( 200 ).json( products );
+    // res.status( 200 ).json( allProducts_JSON );
 };

@@ -3,7 +3,7 @@ import { Card } from 'semantic-ui-react';
 
 const ProductList = ( { products } ) => {
 
-    const mapProductsToCard = ( data ) => {
+    const processData = ( data ) => {
         return data.map( ( product ) => ( {
             header: product.name,
             image: product.mediaUrl,
@@ -11,12 +11,12 @@ const ProductList = ( { products } ) => {
             color: 'teal',
             fluid: true,
             childKey: product._id,
-            href: `/product?_id${ product._id }`
+            href: `/product?_id=${ product._id }`
         } ) )
     };
 
     return <Card.Group
-        items={ mapProductsToCard( products ) }
+        items={ processData( products ) }
         itemsPerRow={3}
         centered
         stackable

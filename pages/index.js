@@ -11,8 +11,12 @@ const Home = ( { products } ) => {
 
 Home.getInitialProps = async () => {
     const url = `http://localhost:3000/api/products`;
-    const response = await axios.get( url );
-    return { products: response.data }
+    try {console.log('api')
+        const response = await axios.get( url );
+        return { products: response.data }
+    } catch(err){
+        console.log('[ getInitialProps error ]: ', err);
+    }
 };
 
 export default Home;
