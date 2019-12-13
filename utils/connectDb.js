@@ -11,15 +11,15 @@ const connectionOptions = {
 
 const connectDb = async () => {
     if ( connection.isConnected ) {
-        console.log( '[ mongo using existing connection pool ]' );
+        console.log('\x1b[33m%s\x1b[0m', '[ EXISTING MONGO POOL ]');
         return
     }
     try {
         const db = await mongoose.connect( connectionString, connectionOptions );
         connection.isConnected = db.connections[ 0 ].readyState;
-        console.log( '[ new mongo connection pool created ]' );
+        console.log( '\x1b[33m%s\x1b[0m',  '[ NEW MONGO POOL ]' );
     } catch ( err ) {
-        console.log( '[ mongo connection pool error ]: ', err )
+        console.log( '\x1b[33m%s\x1b[0m', '[ MONGO POOL ERR ]: ', err )
     }
 };
 

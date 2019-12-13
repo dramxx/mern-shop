@@ -12,11 +12,10 @@ const Home = ({ products }) => {
 Home.getInitialProps = async() => {
     const url = `http://localhost:3000/api/products`;
     try {
-        console.log('api');
         const response = await axios.get(url);
         return { products: response.data };
     } catch (err) {
-        console.log('[ getInitialProps error ]: ', err);
+        console.log('\x1b[33m%s\x1b[0m', '[ getInitialProps error ]: ', err);
     }
 };
 
