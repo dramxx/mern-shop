@@ -4,14 +4,16 @@ import { Container } from 'semantic-ui-react';
 import Header from './Header';
 import HeadContent from './HeadContent';
 
-const Layout = ( { children } ) => {
+const Layout = ({ children }) => {
 
     return (
         <>
             <Head>
                 <HeadContent/>
-                <link rel="stylesheet" type="text/css" href="/static/styles.css"/>
-                <link rel="stylesheet" type="text/css" href="/static/nprogress.css"/>
+                <link rel="stylesheet" type="text/css"
+                      href="/static/styles.css"/>
+                <link rel="stylesheet" type="text/css"
+                      href="/static/nprogress.css"/>
                 <link
                     rel="stylesheet"
                     href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.css"
@@ -19,8 +21,8 @@ const Layout = ( { children } ) => {
                 <title>MERN | SHOP</title>
             </Head>
             <Header/>
-            <Container text style={ { paddingTop: "1em" } }>
-                { children }
+            <Container text style={{ paddingTop: '1em' }}>
+                {children}
             </Container>
         </>
     );

@@ -1,11 +1,13 @@
-import React from "react";
-import App from "next/app";
-import Layout from "../components/_App/Layout";
+import React from 'react';
+import App from 'next/app';
+import Layout from '../components/_App/Layout';
 
-class MernApp extends App {
+class MernApp extends App{
 
-    static getInitialProps = async ( { Component, ctx } ) => {
-        const pageProps = Component.getInitialProps ? await Component.getInitialProps( ctx ) : {};
+    static getInitialProps = async({ Component, ctx }) => {
+        const pageProps = Component.getInitialProps
+            ? await Component.getInitialProps(ctx)
+            : {};
         return { pageProps };
     };
 
@@ -14,7 +16,7 @@ class MernApp extends App {
 
         return (
             <Layout>
-                <Component { ...pageProps }/>
+                <Component {...pageProps}/>
             </Layout>
         );
     }
